@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: nacos-consumer
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ams_zajt?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+mybatis:
+  type-aliases-package: com.manage.archives.entity
+  mapper-locations: classpath:mapper/*.xml
